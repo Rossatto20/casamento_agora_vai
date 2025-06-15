@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt-br" aria-label="Site de casamento de Thaynna e Enzo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaynna & Enzo - Nosso Casamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dusky-rose: #D9BCAF;
+            --thistle: #8A9688;
+            --hawthorne-green: #283038;
+            --royal-scepter: #795663;
+            --blue-noir: #111A27;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f5f2;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(217, 188, 175, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(121, 86, 99, 0.1) 0%, transparent 20%);
+        }
+        
+        .header {
+            background: linear-gradient(rgba(17, 26, 39, 0.7), rgba(17, 26, 39, 0.7)), url('https://i.imgur.com/H2y2f8N.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .couple-names {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin: 0.5rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .opening-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .opening-quote::before, .opening-quote::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--dusky-rose);
+            position: absolute;
+        }
+        
+        .opening-quote::before {
+            top: -10px;
+            left: 10px;
+        }
+        
+        .opening-quote::after {
+            bottom: -30px;
+            right: 10px;
+        }
+        
+        .divider {
+            width: 80%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--thistle), transparent);
+            margin: 2rem auto;
+        }
+        
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--royal-scepter), var(--dusky-rose), var(--thistle));
+        }
+        
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--royal-scepter);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--thistle), transparent);
+            margin: 0.5rem auto;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--royal-scepter), var(--blue-noir));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+        
+        .info-text {
+            flex-grow: 1;
+        }
+        
+        .info-text h3 {
+            margin: 0;
+            color: var(--hawthorne-green);
+            font-size: 1.1rem;
+        }
+        
+        .info-text p {
+            margin: 0.3rem 0 0;
+            color: #555;
+        }
+        
+        .story-text {
+            line-height: 1.8;
+            text-align: justify;
+            background-color: rgba(217, 188, 175, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--royal-scepter);
+        }
+        
+        .gift-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+            background-color: rgba(138, 150, 136, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--royal-scepter);
+        }
+        
+        .gift-item:hover {
+            transform: translateX(5px);
+            background-color: rgba(121, 86, 99, 0.1);
+        }
+        
+        .gift-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--thistle), var(--hawthorne-green));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .gift-details {
+            flex-grow: 1;
+        }
+        
+        .gift-name {
+            font-weight: 500;
+            color: var(--hawthorne-green);
+            margin: 0;
+        }
+        
+        .gift-value {
+            color: var(--royal-scepter);
+            font-weight: 600;
+            margin: 0.2rem 0 0;
+        }
+        
+        .pix-key {
+            background: linear-gradient(135deg, var(--dusky-rose), rgba(217, 188, 175, 0.3));
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+            font-weight: 500;
+            color: var(--blue-noir);
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-yes {
+            background: linear-gradient(135deg, var(--thistle), var(--hawthorne-green));
+            color: white;
+        }
+        
+        .btn-yes:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(138, 150, 136, 0.3);
+        }
+        
+        .btn-no {
+            background: linear-gradient(135deg, var(--royal-scepter), var(--blue-noir));
+            color: white;
+        }
+        
+        .btn-no:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(121, 86, 99, 0.3);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--hawthorne-green), var(--blue-noir));
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        .verse {
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        
+        /* Modal Estilizado */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--royal-scepter), var(--dusky-rose), var(--thistle));
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--thistle);
+            transition: all 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--royal-scepter);
+            transform: rotate(90deg);
+        }
+        
+        #modalTitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: var(--royal-scepter);
+            margin-bottom: 1rem;
+        }
+        
+        #modalText {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .modal form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        
+        .modal label {
+            display: block;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--hawthorne-green);
+        }
+        
+        .modal input, .modal textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        .modal input:focus, .modal textarea:focus {
+            border-color: var(--dusky-rose);
+            box-shadow: 0 0 0 3px rgba(217, 188, 175, 0.1);
+            outline: none;
+            background-color: white;
+        }
+        
+        .modal button[type="submit"] {
+            background: linear-gradient(135deg, var(--thistle), var(--hawthorne-green));
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+        
+        .modal button[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(138, 150, 136, 0.3);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .couple-names {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header animate__animated animate__fadeIn">
+        <div class="couple-names">Thaynna & Enzo</div>
+        <div class="opening-quote">Quando o amor de duas pessoas é abençoado, ele se torna eterno.</div>
+    </header>
+    
+    <div class="divider"></div>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Nossos Nomes</h2>
+        <div style="text-align: center; font-size: 2rem; color: var(--royal-scepter); font-family: 'Dancing Script', cursive;">
+            Thaynna e Enzo
+        </div>
+    </section>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Detalhes do Casamento</h2>
+        
+        <div class="info-item">
+            <div class="info-icon"><i class="far fa-calendar-alt"></i></div>
+            <div class="info-text">
+                <h3>Data</h3>
+                <p>11 de Julho de 2025</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-icon"><i class="far fa-clock"></i></div>
+            <div class="info-text">
+                <h3>Horário</h3>
+                <p>A partir das 17h30</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-text">
+                <h3>Local</h3>
+                <p>R. Serra da Sentinela, 10 – Vila Nova Savoia, São Paulo – SP, 03531-050</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Nossa História</h2>
+        <div class="story-text">
+            <p>Durante a pandemia, fizemos conexões entre amigos para jogar e conversar. Foi assim que, através de um amigo em comum, começamos a nos aproximar. Ele nos adicionou a mesma ligação, e, desde então, as chamadas se tornaram rotineiras, quase diárias, por quatro anos.</p>
+            <p>Mesmo com tanta conexão, nunca nos vimos pessoalmente, já que o Enzo morava em outra cidade. Até que, após anos de amizade à distância, decidimos finalmente nos conhecer. E não deu outra… após dois meses, começamos nossa história de amor e, desde então, nunca mais nos separamos.</p>
+        </div>
+    </section>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Informações Extras</h2>
+        <div class="info-item">
+            <div class="info-icon"><i class="fas fa-utensils"></i></div>
+            <div class="info-text">
+                <h3>Jantar</h3>
+                <p>Rodízio de pizza 🍕🍕</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <div class="info-icon"><i class="fas fa-tshirt"></i></div>
+            <div class="info-text">
+                <h3>Dress Code</h3>
+                <p>As mulheres, por favor, evitem vestir branco, tá? 💙💜</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Confirmação de Presença</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #666;">
+            Sua presença é muito importante para nós! Por favor, confirme até dia 15 de Outubro.
+        </p>
+        
+        <div class="buttons">
+            <button class="btn btn-yes animate__animated animate__pulse animate__infinite animate__slower" 
+                    aria-label="Confirmar presença no casamento" 
+                    onclick="openModal('confirmado')">
+                <i class="fas fa-heart"></i> Conte comigo! 🤩
+            </button>
+            
+            <button class="btn btn-no" 
+                    aria-label="Recusar convite para o casamento" 
+                    onclick="openModal('recusado')">
+                <i class="fas fa-sad-tear"></i> Não poderei ir 😔
+            </button>
+        </div>
+    </section>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Lista de Presentes</h2>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-heart"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Cota para nossa Lua de Mel dos sonhos</p>
+                <p class="gift-value">R$ 100,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-utensils"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Jantar romântico a dois</p>
+                <p class="gift-value">R$ 80,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-home"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Cota para nossa futura casinha</p>
+                <p class="gift-value">R$ 120,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-film"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Noite de cinema + pipoca + guloseimas</p>
+                <p class="gift-value">R$ 60,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-coffee"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Café da manhã na cama (bem romântico)</p>
+                <p class="gift-value">R$ 50,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-spa"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Flores e cheirinhos para nosso lar</p>
+                <p class="gift-value">R$ 50,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-candy-cane"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Caixa de chocolates (porque amor tem sabor)</p>
+                <p class="gift-value">R$ 50,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-pizza-slice"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Uma pizza pra aquele dia de preguiça de cozinhar</p>
+                <p class="gift-value">R$ 70,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-ice-cream"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Balde de sorvete (prós dias felizes ou caóticos)</p>
+                <p class="gift-value">R$ 50,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-fish"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Rodada de sushi (ou várias!)</p>
+                <p class="gift-value">R$ 90,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-wine-glass-alt"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Uma garrafa de vinho (porque a vida a dois merece brindes)</p>
+                <p class="gift-value">R$ 85,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-couch"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Cota pra mobiliar a casa (ou pelo menos comprar uma cadeira rs)</p>
+                <p class="gift-value">R$ 150,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-blanket"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Kit filme: pipoca, colcha e preguiça</p>
+                <p class="gift-value">R$ 65,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-glass-cheers"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Uma saidinha pro rolê (sim, casal também sai!)</p>
+                <p class="gift-value">R$ 100,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-coffee"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Para encher nosso estoque de café (essencial!)</p>
+                <p class="gift-value">R$ 50,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-fire"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Uma ajudinha no gás (porque casar também é pagar boletos rs)</p>
+                <p class="gift-value">R$ 70,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-cookie"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Aquele docinho de fim de tarde</p>
+                <p class="gift-value">R$ 50,00</p>
+            </div>
+        </div>
+        
+        <div class="gift-item">
+            <div class="gift-icon"><i class="fas fa-gift"></i></div>
+            <div class="gift-details">
+                <p class="gift-name">Amor em forma de presente (valor livre)</p>
+                <p class="gift-value">Valor livre</p>
+            </div>
+        </div>
+        
+        <div class="pix-key">
+            <i class="fas fa-qrcode"></i> Chave Pix: tiemialmeida05@gmail.com
+        </div>
+    </section>
+    
+    <section class="animate__animated animate__fadeIn">
+        <h2>Nossas Fotos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/KrSKP1A.png" 
+                     alt="Thaynna e Enzo - Foto 1" 
+                     loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/lCPwgQ3.png" 
+                     alt="Thaynna e Enzo - Foto 2" 
+                     loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/HZcvHhz.png" 
+                     alt="Thaynna e Enzo - Foto 3" 
+                     loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/0eCZwe9.png" 
+                     alt="Thaynna e Enzo - Foto 4" 
+                     loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/hHQYQFw.png" 
+                     alt="Thaynna e Enzo - Foto 5" 
+                     loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.imgur.com/MvOZsi0.png" 
+                     alt="Thaynna e Enzo - Foto 6" 
+                     loading="lazy">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer animate__animated animate__fadeIn">
+        <div class="verse">
+            "Assim, eles já não são dois, mas sim uma só carne. Portanto, o que Deus uniu, ninguém separa." - Mateus 19:6
+        </div>
+    </footer>
+    
+    <!-- Formulário oculto para envio do e-mail -->
+    <form class="hidden-form" id="presencaForm" action="https://formsubmit.co/tiemialmeida05@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Confirmação de Presença no Casamento">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="resposta" id="formResposta">
+        <input type="text" name="nome" id="formNome" placeholder="Seu nome" required>
+        <input type="email" name="email" id="formEmail" placeholder="Seu e-mail">
+        <input type="text" name="mensagem" id="formMensagem" placeholder="Mensagem (opcional)">
+        <button type="submit" id="formSubmit">Enviar</button>
+    </form>
+
+    <!-- Modal de confirmação -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Confirme sua presença</h3>
+            <p id="modalText">Por favor, preencha seus dados para confirmar:</p>
+            
+            <form onsubmit="submitForm(event)">
+                <div>
+                    <label for="guestName">Seu nome completo:</label>
+                    <input type="text" id="guestName" required>
+                </div>
+                
+                <div>
+                    <label for="guestEmail">Seu e-mail (opcional):</label>
+                    <input type="email" id="guestEmail">
+                </div>
+                
+                <div>
+                    <label for="guestMessage">Mensagem para os noivos (opcional):</label>
+                    <textarea id="guestMessage" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Enviar Confirmação
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentResponse = '';
+        
+        function openModal(response) {
+            currentResponse = response;
+            const modal = document.getElementById('confirmationModal');
+            const title = document.getElementById('modalTitle');
+            const text = document.getElementById('modalText');
+            
+            if (response === 'confirmado') {
+                title.textContent = '🎉 Confirme sua presença!';
+                text.textContent = 'Estamos felizes que você poderá estar conosco neste dia especial! Por favor, preencha seus dados:';
+            } else {
+                title.textContent = '😢 Sentiremos sua falta';
+                text.textContent = 'Lamentamos que você não poderá comparecer. Gostaria de deixar uma mensagem para os noivos?';
+            }
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('guestName').value;
+            const email = document.getElementById('guestEmail').value;
+            const message = document.getElementById('guestMessage').value;
+            
+            document.getElementById('formResposta').value = currentResponse === 'confirmado' ? 'Confirmado' : 'Não poderá ir';
+            document.getElementById('formNome').value = name;
+            document.getElementById('formEmail').value = email;
+            document.getElementById('formMensagem').value = message || '(Nenhuma mensagem foi deixada)';
+            
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                document.getElementById('formSubmit').click();
+                
+                alert('Obrigado! Sua confirmação foi registrada com sucesso.');
+                
+                closeModal();
+                event.target.reset();
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Confirmação';
+                submitBtn.disabled = false;
+            }, 1500);
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('confirmationModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
